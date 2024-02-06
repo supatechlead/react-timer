@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { RunningContext } from './App';
 
-
-function RunningToggle() {
-  const [isRunning, setIsRunning] = useState(true)
+const RunningToggle = () => {
+  const { isRunning, setIsRunning } = useContext(RunningContext)
 
   const handleToggle = () => {
       setIsRunning((prevIsRunning)=>!prevIsRunning)
